@@ -97,7 +97,7 @@
     "process": "^0.11.10",
     "rimraf": "^5.0.5",
     "stream": "^0.0.3",
-    "typescript": "~5.6.2",
+    "typescript": "5.7.0-beta",
     "uuid": "^8.3.0",
     "vitest": "^2.1.1"
   },

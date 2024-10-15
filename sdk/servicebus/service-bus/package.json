@@ -134,7 +134,7 @@
     "https-proxy-agent": "^7.0.0",
     "playwright": "^1.46.1",
     "rimraf": "^5.0.5",
-    "typescript": "~5.6.2",
+    "typescript": "5.7.0-beta",
     "uuid": "^8.3.0",
     "vitest": "^2.1.2",
     "ws": "^8.0.0"
