@@ -133,6 +133,11 @@ export const ConnectionConfig = {
     if (path || parsedCS.EntityPath) {
       result.entityPath = path || parsedCS.EntityPath;
     }
+
+    if (parsedCS['Port']) {
+      result.port = Number.parseInt(parsedCS['Port']);
+    }
+
     return result;
   },
 
@@ -157,6 +162,10 @@ export const ConnectionConfig = {
       throw new TypeError("Missing 'host' in configuration");
     }
     config.host = String(config.host);
+
+    if (config.port && !(Number.isSafeInteger(config.port) && config.port >= 0 && config.port <= 65535)) {
+      throw new TypeError("Invalid 'port' in configuration");
+    }
 
     if (options.isEntityPathRequired && !config.entityPath) {
       throw new TypeError("Missing 'entityPath' in configuration");
